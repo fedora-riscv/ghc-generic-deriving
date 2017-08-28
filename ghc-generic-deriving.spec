@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        1.11.2
-Release:        3.git.0.3a30cb6%{?dist}
+Release:        3%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
