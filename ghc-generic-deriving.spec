@@ -7,8 +7,8 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        1.11.2
-Release:        3%{?dist}
+Version:        1.12
+Release:        1%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
@@ -107,6 +107,9 @@ grep "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-dev
 
 
 %changelog
+* Wed Jan 24 2018 Jens Petersen <petersen@redhat.com> - 1.12-1
+- update to 1.12
+
 * Sat Aug 26 2017 Elliott Sales de Andrade <quantum.analyst@gmail.com> 1.11.2-3
 - Minor fixes to devel-doc subpackage.
 
