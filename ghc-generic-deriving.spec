@@ -80,12 +80,6 @@ grep "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-dev
 %cabal_test
 
 
-%post -p /sbin/ldconfig
-
-
-%postun -p /sbin/ldconfig
-
-
 %post devel
 %ghc_pkg_recache
 
