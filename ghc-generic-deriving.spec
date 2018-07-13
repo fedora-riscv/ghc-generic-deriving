@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        1.12.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
@@ -102,6 +102,9 @@ grep "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-dev
 
 
 %changelog
+* Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.12.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Mon Jul 09 2018 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.12.2-1
 - update to 1.12.2
 
