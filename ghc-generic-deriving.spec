@@ -74,7 +74,9 @@ documentation.
 %install
 %ghc_lib_install
 grep -v "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-devel-nodoc.files
+%if %{undefined without_haddock}
 grep "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-devel-doc.files
+%endif
 
 
 %check
@@ -97,8 +99,10 @@ grep "%{_docdir}/ghc/html/libraries/%{pkgver}" %{name}-devel.files > %{name}-dev
 %doc CHANGELOG.md README.md
 
 
+%if %{undefined without_haddock}
 %files devel-doc -f %{name}-devel-doc.files
 %doc CHANGELOG.md README.md
+%endif
 
 
 %changelog
