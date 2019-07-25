@@ -7,8 +7,8 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        1.12.2
-Release:        5%{?dist}
+Version:        1.12.4
+Release:        1%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
@@ -123,6 +123,9 @@ cp -bp %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Thu Jul 25 2019 Jens Petersen <petersen@redhat.com> - 1.12.4-1
+- update to 1.12.4
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.12.2-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
