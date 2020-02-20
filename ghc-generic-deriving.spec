@@ -4,11 +4,11 @@
 %global pkg_name generic-deriving
 %global pkgver %{pkg_name}-%{version}
 
-%bcond_with tests
+%bcond_without tests
 
 Name:           ghc-%{pkg_name}
 Version:        1.12.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
@@ -132,6 +132,9 @@ cp -bp %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Thu Feb 20 2020 Jens Petersen <petersen@redhat.com> - 1.12.4-4
+- enable tests
+
 * Wed Feb 19 2020 Jens Petersen <petersen@redhat.com> - 1.12.4-3
 - refresh to cabal-rpm-2.0.2
 
