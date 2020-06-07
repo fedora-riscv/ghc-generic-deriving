@@ -7,15 +7,14 @@
 %bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        1.12.4
-Release:        4%{?dist}
+Version:        1.13.1
+Release:        1%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
 Url:            https://hackage.haskell.org/package/%{pkg_name}
 # Begin cabal-rpm sources:
 Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
-Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#/%{pkgver}.cabal
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
@@ -80,7 +79,6 @@ This package provides the Haskell %{pkg_name} profiling library.
 %prep
 # Begin cabal-rpm setup:
 %setup -q -n %{pkgver}
-cp -bp %{SOURCE1} %{pkg_name}.cabal
 # End cabal-rpm setup
 
 
@@ -93,7 +91,6 @@ cp -bp %{SOURCE1} %{pkg_name}.cabal
 %install
 # Begin cabal-rpm install
 %ghc_lib_install
-chmod a-x CHANGELOG.md README.md
 # End cabal-rpm install
 
 
@@ -133,6 +130,9 @@ chmod a-x CHANGELOG.md README.md
 
 
 %changelog
+* Sun Jun 07 2020 Jens Petersen <petersen@redhat.com> - 1.13.1-1
+- update to 1.13.1
+
 * Thu Feb 20 2020 Jens Petersen <petersen@redhat.com> - 1.12.4-4
 - enable tests
 
