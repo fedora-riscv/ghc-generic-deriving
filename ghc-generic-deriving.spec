@@ -7,19 +7,17 @@
 %bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        1.14
-Release:        2%{?dist}
+Version:        1.14.1
+Release:        1%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
 Url:            https://hackage.haskell.org/package/%{pkg_name}
 # Begin cabal-rpm sources:
 Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
-Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#/%{pkgver}.cabal
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
-BuildRequires:  dos2unix
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-base-prof
@@ -125,7 +123,6 @@ This package provides the Haskell %{pkg_name} profiling library.
 %prep
 # Begin cabal-rpm setup:
 %setup -q -n %{pkgver}
-dos2unix -k -n %{SOURCE1} %{pkg_name}.cabal
 # End cabal-rpm setup
 
 
@@ -169,6 +166,9 @@ dos2unix -k -n %{SOURCE1} %{pkg_name}.cabal
 
 
 %changelog
+* Tue Jun 07 2022 Jens Petersen <petersen@redhat.com> - 1.14.1-1
+- https://hackage.haskell.org/package/generic-deriving-1.14.1/changelog
+
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.14-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
