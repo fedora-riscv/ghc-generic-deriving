@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        1.14.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD
@@ -166,6 +166,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Thu Jul 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.14.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
 * Tue Jun 07 2022 Jens Petersen <petersen@redhat.com> - 1.14.1-1
 - https://hackage.haskell.org/package/generic-deriving-1.14.1/changelog
 
