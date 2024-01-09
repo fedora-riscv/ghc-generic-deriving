@@ -4,11 +4,13 @@
 %global pkg_name generic-deriving
 %global pkgver %{pkg_name}-%{version}
 
+%ifnarch riscv64
 %bcond_without tests
+%endif
 
 Name:           ghc-%{pkg_name}
 Version:        1.14.4
-Release:        %autorelease
+Release:        %autorelease -e 0.rv64
 Summary:        Generic programming library for generalised deriving
 
 License:        BSD-3-Clause
